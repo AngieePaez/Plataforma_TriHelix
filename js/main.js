@@ -41,6 +41,16 @@
         format: 'LT'
     });
 
+    document.addEventListener("DOMContentLoaded", function() {
+        if (!document.body.classList.contains("no-footer")) {
+            let footer = document.createElement("footer");
+            footer.className = "text-center py-3 bg-light";
+            footer.innerHTML = "<p>© 2025 TriHélix. Todos los derechos reservados.</p>";
+            document.body.appendChild(footer);
+        }
+    });
+    
+
 
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
